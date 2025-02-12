@@ -8,3 +8,4 @@ Route::get('/', [PublicController::class, 'index'])->name('home');
 
 Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
 Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
+Route::resource('posts', PostController::class);
