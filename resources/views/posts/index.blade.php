@@ -21,6 +21,12 @@
                     </a>
                 @endforeach
             </div>
+            
+            <!-- Pagination -->
+            <div class="mt-4">
+                {{ $posts->links() }}
+            </div>
+
         @else
             <p class="text-muted">No posts available.</p>
         @endif
