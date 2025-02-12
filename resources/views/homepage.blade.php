@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Homepage</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-</head>
-<body>
-    <div class="container mt-5">
-        <h1 class="text-center">Welcome to My Blog</h1>
-        <p class="text-center">This is a simple blog application built with Laravel and Bootstrap.</p>
+@extends('layouts.app')
+
+@section('title', 'Homepage')
+
+@section('content')
+    <div class="text-center">
+        <h1>Welcome to My Blog</h1>
+        <p>This is a simple blog application built with Laravel and Bootstrap.</p>
+        <a href="{{ route('posts.create') }}" class="btn btn-primary">Create a New Post</a>
     </div>
-</body>
-</html>
+@endsection
